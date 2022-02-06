@@ -21,7 +21,10 @@ const NavBar = () => {
     const useStyle = makeStyles({
         navItem :{
             color : 'white',
-            textDecoration : 'none'
+            textDecoration : 'none',
+            [theme.breakpoints.down('sm')]: {
+              display : 'none!important',
+          }
         },
         navIcon : {
             [theme.breakpoints.up('sm')]: {

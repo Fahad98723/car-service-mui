@@ -1,9 +1,14 @@
 import { Container, Grid, Typography, Button } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import img from '../../../images/modern_equipment.png'
+import { increment } from '../../../redux/slices/carSlice';
 
 const ModernEquipment = () => {
+    const count = useSelector((state) => state.car.count )
+    const dispatch = useDispatch()
+
     const verticle = {
         display : 'flex',
         alignItems : 'center'
@@ -26,8 +31,11 @@ const ModernEquipment = () => {
                     <Typography variant="h5" gutterBottom component="div">
                     Call for book: 8-800-10-500
                     </Typography>
-                    <Button variant = 'contained'>Readmore</Button>
+                    <Button onClick={() => dispatch(increment ())} variant = 'contained'>Readmore</Button>
                     </Box>
+                    <Typography variant="h5" gutterBottom component="div">
+                    Number {count}
+                    </Typography>
                 </Grid>
                 
                 <Grid item xs={12} md={7}>

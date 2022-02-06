@@ -9,15 +9,15 @@ import SwiperCore, {
   } from 'swiper';
 import { Button, Typography } from '@mui/material';
   // install Swiper modules
-  SwiperCore.use([Autoplay,Pagination,Navigation]);
+SwiperCore.use([Autoplay,Pagination,Navigation]);
 
-  const bannerData = [
+const bannerData = [
       {title : 'Keeping Your Car New', img : 'https://i.ibb.co/k1WXpwb/benjamin-brunner-K3cj-UOMm-Mhc-unsplash.jpg'},
       {title : 'Interior And Exterior Cleaning ', img :'https://i.ibb.co/RDvQxrS/egor-vikhrev-c-D7n-A-pqj6-E-unsplash.jpg'},
       {title : 'Contactless Car Wash', img : 'https://i.ibb.co/DKBsSps/andre-tan-p-Rpp-MPh4-Zho-unsplash.jpg'},
       {title : 'Quality Service For You', img : 'https://i.ibb.co/K9GDN0W/christian-buehner-Fd6osy-Vbt-G4-unsplash.jpg'},
       {title : 'Care Service For Your Car', img : 'https://i.ibb.co/CsF7Kwb/tory-bishop-v-Y-WNTNf-XR0-unsplash.jpg'}
-  ]
+    ]
 const Banner = () => {
     
     return (
@@ -32,7 +32,7 @@ const Banner = () => {
             {
                 bannerData.map(banner => 
                     <SwiperSlide 
-                    
+                    style={{background: ` linear-gradient(rgba(34, 65, 124, 0.5),rgba(26, 54, 105, 0.5)) ,url('${banner.img}) `, backgroundRepeat:'no-repeat', backgroundPosition:'center center', backgroundSize:'cover', padding:'220px 0px'}}
                     
                     >
                         <Box sx={{mb:3}}>
